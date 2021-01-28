@@ -1,0 +1,21 @@
+.card{
+    width: 300px;
+    height: 150px;
+    border: 1px solid white;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.thumbnail {
+    display: flex;
+    flex: .4;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+}
+
+.description {
+    display: flex;
+    flex: .6;
+}

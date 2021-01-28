@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial";
+}
+
+#container{ 
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background: #202020;
+  justify-content: center;
+}
+
+#backgroundVideo{ 
+  width:100%; 
+  height:inherit; 
+}
+
+#background{
+  background: url('../img/background.jpg') no-repeat;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  flex: .873;
+}
+
+#content {
+  position: fixed;
+  bottom: 50px;
+  background: rgba(32, 32, 32, 0.3);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px 0px;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  justify-content: center;
+}
+
+.frame {
+  width: 60%;
+  position: absolute;
+  top: 0;
+  border-right: 270px solid transparent;
+  border-bottom: 100vh solid #202020;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.title-container{
+  color: white;
+  position: fixed;
+  top: 60px;
+  display: flex;
+  padding: 20px 150px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.title{
+  font-size: 70px;
+  display: flex;
+}
+
+.subtitle{
+  font-size: 20px;
+  display: flex;
+}
+
+.button{
+  padding: 8px 20px;
+    background: #646464;
+    border-radius: 11px;
+    color: white;
+    display: flex;
+    width: 155px;
+    font-size: 14px;
+    justify-content: center;
+    margin: 0px 150px;
+    align-items: center;
+    position: fixed;
+    bottom: 260px;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     left: -100px;
+  }
+  100% {
+     opacity: 1;
+     left: 0;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeIn {
+  0% {
+     opacity: 0;
+  }
+  100% {
+     opacity: 1;
+     left: 0;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+  
+@keyframes fadeInBottom {
+  0% {
+     opacity: 0;
+     bottom: 0;
+  }
+  100% {
+     opacity: 1;
+     bottom: 50px;
+  }
+}
+
+.fadeInBottom {
+  animation-name: fadeInBottom;
+}
