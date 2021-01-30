@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="stylesheet" type="text/css" href="styles/index.css" />
         <link rel="stylesheet" type="text/css" href="styles/carousel.css" />
         <link rel="stylesheet" type="text/css" href="styles/card.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <script type="text/javascript" src="index.js"></script>
-        <script type="text/javascript" src="scripts/carousel.js"></script>
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
     </head>
     <body>
 
@@ -20,69 +22,16 @@
             <div class="title">Lorem ipsum</div>
             <div class="subtitle">Consectetur adipiscing elit</div>
         </div>
-        <div id="button" class="button hide">Nulla bibendum</div>
+        <a id="button" class="button hide" href="/html/billboard/billboard.html">Nulla bibendum</a>
         <div id="content" class="hide">
             <div class="marquee">
-                <ul class="marquee-content">
-                    <li>
-                        <div class="card">
-                            <div class="thumbnail">
-                                
-                            </div>
-                            <div class="description">
-                                <div class="dtitle"></div>
-                                <div class="dtext"></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>Hi</li>
-                    <li>Bon Jour!</li>
-                    <li>SS</li>
-                    <li>SSD</li>
-                    <li>KKK</li>
-                    <li>OOO</li>
+                <ul id="carousel" class="marquee-content">
                 </ul>
             </div>
         </div>
         
         <script>
-            let bg = document.getElementById("background");
-            let bgv = document.getElementById("backgroundVideo");
-            let fm = document.getElementById("frame");
-            let ct = document.getElementById("content");
-            let ttl = document.getElementById("title-container");
-            let btn = document.getElementById("button");
-            setTimeout(() =>{
-                bg.classList.remove("hide");
-                bg.classList.add("flex");
-                bg.classList.add("fadeIn");
-                bgv.classList.remove("flex");
-                bgv.classList.add("hide");
-            }, 7000);
-            setTimeout(() =>{
-                fm.classList.remove("hide");
-                fm.classList.add("fadeInLeft");
-                fm.classList.add("flex");
-                ct.classList.remove("hide");
-                ct.classList.add("flex");
-                ct.classList.add("fadeInBottom");
-                ttl.classList.remove("hide");
-                ttl.classList.add("fadeIn");
-                btn.classList.remove("hide");
-                btn.classList.add("fadeIn");
-
-                const root = document.documentElement;
-                const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-                const marqueeContent = document.querySelector("ul.marquee-content");
-
-                root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-                for(let i=0; i<marqueeElementsDisplayed; i++) {
-                marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-                }
-            }, 6000);
-
-            
+           loadContent();            
         </script>
     </body>
 </html>

@@ -1,21 +1,36 @@
 .card{
-    width: 300px;
-    height: 150px;
-    border: 1px solid white;
+    width: 350px;
+    height: 130px;
     margin: 0px 20px;
     display: flex;
     flex-direction: row;
+    padding: 0px 10px;
 }
 
 .thumbnail {
-    display: flex;
-    flex: .4;
-    width: 60px;
-    height: 60px;
-    border: 1px solid white;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
 }
 
 .description {
     display: flex;
-    flex: .6;
+    flex: 1;
+    flex-direction: column;
+    width: 250px;
+    word-break: break-word;
+    white-space: break-spaces;
+    padding: 0px 15px;
+}
+
+.dtitle {
+    margin-bottom: 10px;
+}
+
+.dtext{
+    font-size:12px !important;
+}
+
+.card:hover{
+    cursor: pointer;
 }

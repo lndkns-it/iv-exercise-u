@@ -1,0 +1,46 @@
+body{
+    background-image: url(../img/placeholders-background.jpg);
+    background-size: 87.3%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #202020;
+    height: 97vh;
+}
+
+#parallelogram {
+    width: 150px;
+    height: 100px;
+    margin: 0 0 0 -20px;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+    background: red;
+    overflow: hidden;
+    position: relative;
+}
+
+.bb1{
+    width: 7.5%;
+    height: 20.7%;
+    left: 42.5%;
+    top: 4%;
+    position: fixed;
+    transform: perspective(550px) rotateY(4deg) rotateX(21deg) rotateZ(5deg);
+    transform-origin: left;
+}
+
+.bb2{
+    width: 10%;
+    height: 10%;
+}
+
+.bb3{
+    width: 10%;
+    height: 10%;
+}
+
+.bb4{
+    width: 10%;
+    height: 10%;
+}
