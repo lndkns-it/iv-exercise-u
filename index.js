@@ -138,6 +138,8 @@ function hideDetail() {
     let dt = document.getElementById("detail");
     let dtt = document.getElementById("title-detail");
     let dtc = document.getElementById("content-detail");
+    let vid = document.getElementById("videoDetail");
+
     dt.classList.remove("fadeInBottom");
     dt.classList.add("fadeOut");
     dt.classList.add("hide");
@@ -150,4 +152,7 @@ function hideDetail() {
     showIndex();
 
     dt.classList.remove("fadeOut");
+    dtt.classList.remove("fadeOut");
+    dtc.classList.remove("fadeOut");
+    vid.removeAttribute("src");
 }
