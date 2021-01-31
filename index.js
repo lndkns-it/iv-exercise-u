@@ -1,3 +1,5 @@
+let data;
+
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -14,10 +16,7 @@ function loadContent() {
 
     let bg = document.getElementById("background");
     let bgv = document.getElementById("backgroundVideo");
-    let fm = document.getElementById("frame");
-    let ct = document.getElementById("content");
-    let ttl = document.getElementById("title-container");
-    let btn = document.getElementById("button");
+    
     setTimeout(() =>{
         bg.classList.remove("hide");
         bg.classList.add("flex");
@@ -28,18 +27,12 @@ function loadContent() {
 
 
     setTimeout(() =>{
+        let fm = document.getElementById("frame");
+
         fm.classList.remove("hide");
         fm.classList.add("fadeInLeft");
         fm.classList.add("flex");
-        ct.classList.remove("hide");
-        ct.classList.add("flex");
-        ct.classList.add("fadeInBottom");
-        ttl.classList.remove("hide");
-        ttl.classList.add("fadeIn");
-        btn.classList.remove("hide");
-        btn.classList.add("fadeIn");
-
-        let data;
+        showIndex();
 
         readTextFile("data/data.json", function(text){
             data = JSON.parse(text);
@@ -47,13 +40,12 @@ function loadContent() {
                 var dateA = new Date(a.datetime), dateB = new Date(b.datetime);
                 return dateA - dateB;
             });
-            console.log(data);
 
             let car = document.getElementById("carousel");
             let html = "";
             for (i = 0; i < data.length; i++) {
                 html = html + `<li>
-                    <div class="card">
+                    <div class="card" onclick="loadDetail(${data[i].id});">
                         <img src="img/thumbnail (${i + 1}).jpg" class="thumbnail">
                         <div class="description">
                             <div class="dtitle">${data[i].title}</div>
@@ -77,3 +69,85 @@ function loadContent() {
     }, 6000);
 }
 
+function showIndex(){
+
+    let ct = document.getElementById("content");
+    let ttl = document.getElementById("title-container");
+    let btn = document.getElementById("button");
+    
+    ct.classList.remove("hide");
+    ct.classList.add("flex");
+    ct.classList.add("fadeInBottom");
+    ttl.classList.remove("hide");
+    ttl.classList.add("fadeIn");
+    ttl.classList.add("flex");
+    btn.classList.remove("hide");
+    btn.classList.add("fadeIn");
+    btn.classList.add("flex");
+}
+
+function hideIndex(){
+
+    let ct = document.getElementById("content");
+    let ttl = document.getElementById("title-container");
+    let btn = document.getElementById("button");
+
+    ct.classList.remove("flex");
+    ct.classList.add("hide");
+    ct.classList.add("fadeOut");
+    ttl.classList.remove("flex");
+    ttl.classList.add("fadeOut");
+    ttl.classList.add("hide");
+    btn.classList.remove("flex");
+    btn.classList.add("fadeOut");
+    btn.classList.add("hide");
+
+    ct.classList.remove("fadeOut");
+    ttl.classList.remove("fadeOut");
+    btn.classList.remove("fadeOut");
+    
+}
+
+function loadDetail(id) {
+    hideIndex();
+    let dt = document.getElementById("detail");
+    let dtt = document.getElementById("title-detail");
+    let dtc = document.getElementById("content-detail");
+    let vid = document.getElementById("videoDetail");
+
+    dt.classList.remove("hide");
+    dt.classList.add("fadeInBottom");
+    dtt.classList.remove("hide");
+    dtt.classList.add("fadeInBottom");
+    dtc.classList.remove("hide");
+    dtc.classList.add("fadeInBottom");
+
+    let info = data.find(d => {
+        return d.id === id;
+    });
+    setTimeout(() => {
+        vid.classList.add("fadeIn");
+        vid.setAttribute("src", `${info.video}?autoplay=1`);
+    }, 2000);
+    
+    dtt.innerText = info.title;
+    dtc.innerText = info.content;
+}
+
+function hideDetail() {
+    let dt = document.getElementById("detail");
+    let dtt = document.getElementById("title-detail");
+    let dtc = document.getElementById("content-detail");
+    dt.classList.remove("fadeInBottom");
+    dt.classList.add("fadeOut");
+    dt.classList.add("hide");
+    dtt.classList.remove("fadeInBottom");
+    dtt.classList.add("fadeOut");
+    dtt.classList.add("hide");
+    dtc.classList.remove("fadeInBottom");
+    dtc.classList.add("fadeOut");
+    dtc.classList.add("hide");
+    showIndex();
+
+    dt.classList.remove("fadeOut");
+}

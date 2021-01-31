@@ -6,30 +6,36 @@
         <link rel="stylesheet" type="text/css" href="styles/index.css" />
         <link rel="stylesheet" type="text/css" href="styles/carousel.css" />
         <link rel="stylesheet" type="text/css" href="styles/card.css" />
+        <link rel="stylesheet" type="text/css" href="styles/detail.css" />
         
         <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
     </head>
     <body>
-
         <div id="container">
             <iframe id="backgroundVideo" src="https://player.vimeo.com/video/253989945?autoplay=1&controls=0&muted=1" frameborder="0" allowfullscreen class="flex"></iframe>
             <div id="background" class="hide"></div>
             <div id="frame" class="frame hide"></div>
-            
         </div>
         <div id="title-container" class="title-container hide">
             <div class="title">Lorem ipsum</div>
             <div class="subtitle">Consectetur adipiscing elit</div>
         </div>
+        <div id="title-detail" class="title-detail hide">
+        </div>
         <a id="button" class="button hide" href="/html/billboard/billboard.html">Nulla bibendum</a>
+        <div id="content-detail" class="content-detail hide">
+        </div>
         <div id="content" class="hide">
             <div class="marquee">
                 <ul id="carousel" class="marquee-content">
                 </ul>
             </div>
         </div>
-        
+        <div id="detail" class="detail hide">
+            <div class="close" onclick="hideDetail();">X</div>
+            <iframe id="videoDetail" frameborder="0" allowfullscreen class="flex"></iframe>
+        </div>
         <script>
            loadContent();            
         </script>

@@ -92,6 +92,7 @@ body {
   animation-duration: 1s;
   animation-fill-mode: both;
   text-decoration: none;
+  z-index: 1;
 }
 
 .button:hover{
@@ -148,4 +149,17 @@ body {
 
 .fadeInBottom {
   animation-name: fadeInBottom;
+}
+
+@keyframes fadeOut {
+  0% {
+     opacity: 1;
+  }
+  100% {
+     opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
 }

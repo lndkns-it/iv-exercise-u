@@ -7,19 +7,6 @@ body{
     height: 97vh;
 }
 
-#parallelogram {
-    width: 150px;
-    height: 100px;
-    margin: 0 0 0 -20px;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    -o-transform: skew(20deg);
-    transform: skew(20deg);
-    background: red;
-    overflow: hidden;
-    position: relative;
-}
-
 .bb1{
     width: 7.5%;
     height: 20.7%;
@@ -31,16 +18,31 @@ body{
 }
 
 .bb2{
-    width: 10%;
-    height: 10%;
+    width: 8.2%;
+    height: 27.6%;
+    left: 42.1%;
+    top: 24.3%;
+    position: fixed;
+    transform: perspective(550px) rotateY(4deg) rotateX(17deg) rotateZ(4deg);
+    transform-origin: left;
 }
 
 .bb3{
-    width: 10%;
-    height: 10%;
+    width: 8%;
+    height: 28%;
+    left: 42%;
+    top: 53%;
+    position: fixed;
+    transform: perspective(1000px) rotateY(-1deg) rotateX(15deg) rotateZ(1deg);
+    transform-origin: left;
 }
 
 .bb4{
-    width: 10%;
-    height: 10%;
+    width: 6.8%;
+    height: 21.5%;
+    right: 23.5%;
+    top: 33.7%;
+    position: fixed;
+    transform: perspective(287px) rotateY(-9deg) rotateX(9deg) rotateZ(-13deg);
+    transform-origin: right;
 }
