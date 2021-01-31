@@ -5,6 +5,8 @@ For this exercise I tried to implement pure javascript to solve the issue.
 As you can see I tried to implement jquery but I couldn't load the library, and I 
 didn't want to spent a lot of time on researching at least for this exercise.
 
+IMPORTANT: I used the webserver Chrome extension to be able to load some content in the application.
+
 I let you the sources of some code and references used for this exercise:
 - https://codepen.io/Coding_Journey/pen/yWjWKd
 - https://vimeo.zendesk.com/hc/es/articles/360001494447-C%C3%B3mo-usar-los-par%C3%A1metros-del-reproductor
