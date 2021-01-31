@@ -13,5 +13,9 @@ I tried to implement the <video> tag but to show vimeo videos I need a pro accou
 
 I'm not sure if the responsiveness is working as I didn't have enough time to test, (but I think I missed it), however I'd like to add in this notes that adding some styles with some @media queries and window sizes we can handle responsiveness, also with the use of flex boxes.
 
+Also I'd like to add that the use of some libraries as bootstrap can help to improve the UX/UI.
+
+I'm principally an front end developer I could think a lot of posibilities with the framework but I made my best to implement pure javascript, was a really cool challenge, thanks for the opportunity that helps me see I can improve everyday.
+
 I hope this covers all the required job.
 Greetings!
